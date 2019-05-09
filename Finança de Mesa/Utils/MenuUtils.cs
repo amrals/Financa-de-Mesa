@@ -1,0 +1,37 @@
+namespace Finança_de_Mesa.Utils
+{
+    public class MenuUtils
+    {
+        public static void MenuDeslogado()
+        {
+            System.Console.WriteLine("||=================================||");
+            System.Console.WriteLine("||         Finança de Mesa         ||");
+            System.Console.WriteLine("||---------------------------------||");
+            System.Console.WriteLine("|| 1 - Cadastrar Usuário           ||");
+            System.Console.WriteLine("|| 2 - Efetuar Login               ||");
+            System.Console.WriteLine("|| 0 - Sair                        ||");
+            System.Console.WriteLine("||=================================||");
+        }
+        public static void MenuLogado()
+        {
+            System.Console.WriteLine("||=================================||");
+            System.Console.WriteLine("||         Finança de Mesa         ||");
+            System.Console.WriteLine("||---------------------------------||");
+            System.Console.WriteLine("|| 1 - Transações                  ||");
+            System.Console.WriteLine("|| 2 - Visualizar Extrato no WORD  ||");
+            System.Console.WriteLine("|| 3 - Visualizar Extrato no APP   ||");
+            System.Console.WriteLine("|| 0 - Sair                        ||");
+            System.Console.WriteLine("||=================================||");
+        }
+        public static void MenuADM()
+        {
+            System.Console.WriteLine("||=================================||");
+            System.Console.WriteLine("||         Finança de Mesa         ||");
+            System.Console.WriteLine("||---------------------------------||");
+            System.Console.WriteLine("|| 1 - Listar Usuários             ||");
+            System.Console.WriteLine("|| 2 - Exportar dados para ZIP     ||");
+            System.Console.WriteLine("|| 0 - Sair                        ||");
+            System.Console.WriteLine("||=================================||");
+        }
+    }
+}
