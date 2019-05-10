@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\41813664803\\Documents\\Finança de Mesa\\Finança de Mesa.csproj",
+      "projectUniqueName": "C:\\Users\\41813664803\\Desktop\\Financa-de-Mesa\\Finança de Mesa\\Finança de Mesa.csproj",
       "projectName": "Finança de Mesa",
-      "projectPath": "C:\\Users\\41813664803\\Documents\\Finança de Mesa\\Finança de Mesa.csproj",
+      "projectPath": "C:\\Users\\41813664803\\Desktop\\Financa-de-Mesa\\Finança de Mesa\\Finança de Mesa.csproj",
       "packagesPath": "C:\\Users\\41813664803\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\41813664803\\Documents\\Finança de Mesa\\obj\\",
+      "outputPath": "C:\\Users\\41813664803\\Desktop\\Financa-de-Mesa\\Finança de Mesa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
