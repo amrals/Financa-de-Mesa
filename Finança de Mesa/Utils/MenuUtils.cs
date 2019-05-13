@@ -43,8 +43,9 @@ namespace Finança_de_Mesa.Utils
             Console.ResetColor();
             System.Console.WriteLine("||");
             System.Console.WriteLine("||---------------------------------||");
-            System.Console.WriteLine("|| 1 - Listar Usuários             ||");
-            System.Console.WriteLine("|| 2 - Exportar dados para ZIP     ||");
+            System.Console.WriteLine("|| 1 - Listar Usuários no APP      ||");
+            System.Console.WriteLine("|| 2 - Listar Usuários NO WORD     ||");
+            System.Console.WriteLine("|| 3 - Exportar dados para ZIP     ||");
             System.Console.WriteLine("|| 0 - Sair                        ||");
             System.Console.WriteLine("||=================================||");
         }

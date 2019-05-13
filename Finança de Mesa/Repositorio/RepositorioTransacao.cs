@@ -2,36 +2,38 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Finança_de_Mesa.ViewModel;
+using Spire.Doc;
+using Spire.Doc.Documents;
 
-namespace Finança_de_Mesa.Repositorio
-{
-    public class RepositorioTransacao
-    {
+namespace Finança_de_Mesa.Repositorio {
+    public class RepositorioTransacao {
         public static void Inserir (TransacaoViewModel transacaoTeste) {
-            StreamWriter sw = new StreamWriter ("transacaos.csv", true);
+            StreamWriter sw = new StreamWriter ("Iniciar/transacoes.csv", true);
 
             transacaoTeste.DataTransacao = DateTime.Now;
 
-            sw.WriteLine ($"\n{transacaoTeste.NomeUsuario};{transacaoTeste.Valor};{transacaoTeste.Tipo};{transacaoTeste.Descricao};{transacaoTeste.DataTransacao}");
+            sw.Write ($"{transacaoTeste.NomeUsuario};{transacaoTeste.Valor};{transacaoTeste.Tipo};{transacaoTeste.Descricao};{transacaoTeste.DataTransacao}\n");
             sw.Close ();
         }
         public static List<TransacaoViewModel> Listar () {
             List<TransacaoViewModel> transacaos = new List<TransacaoViewModel> ();
             TransacaoViewModel modeloTransacaos;
-            if (!File.Exists ("transacaos.csv")) {
+            if (!File.Exists ("Iniciar/transacoes.csv")) {
                 return null;
             }
-            string[] transacaosArray = File.ReadAllLines ("transacaos.csv");
+            string[] transacaosArray = File.ReadAllLines ("Iniciar/transacoes.csv");
             foreach (var item in transacaosArray) {
-                if(item != null){
-                string[] dadosDeCadaTransacao = item.Split (";");
-                modeloTransacaos = new TransacaoViewModel ();
-                modeloTransacaos.NomeUsuario = dadosDeCadaTransacao[0];
-                modeloTransacaos.Valor = float.Parse(dadosDeCadaTransacao[1]);
-                modeloTransacaos.Tipo = dadosDeCadaTransacao[2];
-                modeloTransacaos.Descricao = dadosDeCadaTransacao[3];
-                modeloTransacaos.DataTransacao = DateTime.Parse (dadosDeCadaTransacao[4]);
-                transacaos.Add (modeloTransacaos);
+                if (item != null) {
+                    string[] dadosDeCadaTransacao = item.Split (";");
+                    if (dadosDeCadaTransacao[0].Length > 1) {
+                        modeloTransacaos = new TransacaoViewModel ();
+                        modeloTransacaos.NomeUsuario = dadosDeCadaTransacao[0];
+                        modeloTransacaos.Valor = float.Parse (dadosDeCadaTransacao[1]);
+                        modeloTransacaos.Tipo = dadosDeCadaTransacao[2];
+                        modeloTransacaos.Descricao = dadosDeCadaTransacao[3];
+                        modeloTransacaos.DataTransacao = DateTime.Parse (dadosDeCadaTransacao[4]);
+                        transacaos.Add (modeloTransacaos);
+                    }
                 }
             }
 
@@ -39,13 +41,12 @@ namespace Finança_de_Mesa.Repositorio
         }
 
         public static List<TransacaoViewModel> BuscarTransacao () {
-                List<TransacaoViewModel> transacoes = Listar ();
-                if (transacoes != null) {
-                    return transacoes;
-                }
-                else{
-                    return null;
-                }
-                }
+            List<TransacaoViewModel> transacoes = Listar ();
+            if (transacoes != null) {
+                return transacoes;
+            } else {
+                return null;
+            }
+        }
     }
 }

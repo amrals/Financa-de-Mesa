@@ -6,4 +6,8 @@
     <RootNamespace>Finança_de_Mesa</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Spire.Doc" Version="7.5.1" />
+  </ItemGroup>
+
 </Project>
