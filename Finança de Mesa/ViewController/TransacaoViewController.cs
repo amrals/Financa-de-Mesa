@@ -78,6 +78,7 @@ namespace Finança_de_Mesa.ViewController {
             } else {
                 CoresUtils.MostrarMensagem ("\nNão há saldo suficiente para esta transação!!!", TipoMensagemEnum.ERRO);
                 System.Console.WriteLine ("Pressione ENTER para continuar");
+                Console.ReadLine();
                 Console.Clear ();
                 return recuperado;
             }
@@ -108,13 +109,11 @@ namespace Finança_de_Mesa.ViewController {
             Document doc = new Document ();
             Section section = doc.AddSection ();
             Paragraph Para = section.AddParagraph ();
-            nome = nome.ToUpper();
-            Para.AppendText ($"                    LISTAGEM DAS TRANSAÇÕES DO USUÁRIO: {nome}\n\n\n");
+            string nomeMaisculo = nome.ToUpper();
+            Para.AppendText ($"                    LISTAGEM DAS TRANSAÇÕES DO USUÁRIO: {nomeMaisculo}\n\n\n");
             Para.AppendText ($"TRANSAÇÕES:\n\n");
             foreach (var item in transacoes) {
-                if (item != null) {
-                    if (item.NomeUsuario.Equals(nome))
-                    Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n");
+                if (item != null && item.NomeUsuario.Equals(nome)){
                     Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n");
                     Para.AppendText ($"Valor:                                                                R$ {item.Valor}\n");
                     Para.AppendText ($"Tipo:                                                                  {item.Tipo}\n");

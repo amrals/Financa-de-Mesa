@@ -153,7 +153,7 @@ namespace Finança_de_Mesa.ViewController {
                     Para.AppendText ($"Senha:                                     {item.Senha}\n");
                     Para.AppendText ($"Data de Nascimento:              {item.DataDeNascimento}\n");
                     Para.AppendText ($"Saldo:                                      R$ {item.Saldo}\n");
-                    Para.AppendText ($"Tipo de Usuário:                     {item.Tipo}\n");
+                    Para.AppendText ($"Tipo de Usuário:                    {item.Tipo}\n");
                     Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n\n");
                 }
             }
