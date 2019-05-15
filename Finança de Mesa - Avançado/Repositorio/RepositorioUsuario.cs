@@ -8,18 +8,23 @@ using Spire.Doc.Documents;
 
 namespace Finança_de_Mesa.Repositorio {
     public class RepositorioUsuario {
-        List<UsuarioViewModel> usuarios = new List<UsuarioViewModel> ();
         public static void Inserir (UsuarioViewModel usuarioTeste) {
+
+            List<UsuarioViewModel> usuarios = Listar ();
+            int id = usuarios.Count + 1;
+            usuarioTeste.Id = id;
             StreamWriter sw = new StreamWriter ("Iniciar/usuarios.csv", true);
 
             usuarioTeste.Tipo = "Comum";
 
-            sw.WriteLine ($"{usuarioTeste.Nome};{usuarioTeste.Email};{usuarioTeste.Senha};{usuarioTeste.DataDeNascimento};{usuarioTeste.Saldo};{usuarioTeste.Tipo}");
+            sw.WriteLine ($"{usuarioTeste.Id};{usuarioTeste.Nome};{usuarioTeste.Email};{usuarioTeste.Senha};{usuarioTeste.DataDeNascimento:dd/MM/yyyy};{usuarioTeste.Saldo};{usuarioTeste.Tipo}");
             sw.Close ();
         }
-        public List<UsuarioViewModel> Listar () {
+        public static List<UsuarioViewModel> Listar () {
+
             List<UsuarioViewModel> usuarios = new List<UsuarioViewModel> ();
             UsuarioViewModel modeloUsuarios;
+
             if (!File.Exists ("Iniciar/usuarios.csv")) {
                 return null;
             }
@@ -27,14 +32,15 @@ namespace Finança_de_Mesa.Repositorio {
             foreach (var item in usuariosArray) {
                 if (item != null) {
                     string[] dadosDeCadaUsuario = item.Split (";");
-                    if (dadosDeCadaUsuario[0].Length > 1) {
+                    if (dadosDeCadaUsuario[1].Length > 1) {
                         modeloUsuarios = new UsuarioViewModel ();
-                        modeloUsuarios.Nome = dadosDeCadaUsuario[0];
-                        modeloUsuarios.Email = dadosDeCadaUsuario[1];
-                        modeloUsuarios.Senha = dadosDeCadaUsuario[2];
-                        modeloUsuarios.DataDeNascimento = DateTime.Parse (dadosDeCadaUsuario[3]);
-                        modeloUsuarios.Saldo = float.Parse (dadosDeCadaUsuario[4]);
-                        modeloUsuarios.Tipo = dadosDeCadaUsuario[5];
+                        modeloUsuarios.Id = int.Parse(dadosDeCadaUsuario[0]);
+                        modeloUsuarios.Nome = dadosDeCadaUsuario[1];
+                        modeloUsuarios.Email = dadosDeCadaUsuario[2];
+                        modeloUsuarios.Senha = dadosDeCadaUsuario[3];
+                        modeloUsuarios.DataDeNascimento = DateTime.Parse (dadosDeCadaUsuario[4]);
+                        modeloUsuarios.Saldo = float.Parse (dadosDeCadaUsuario[5]);
+                        modeloUsuarios.Tipo = dadosDeCadaUsuario[6];
                         usuarios.Add (modeloUsuarios);
                     }
                 }

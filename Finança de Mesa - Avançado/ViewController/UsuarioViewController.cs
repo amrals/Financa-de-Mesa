@@ -138,27 +138,28 @@ namespace Finança_de_Mesa.ViewController {
             return usuarioRecuperado;
         }
         public static void ExibirUsuarios () {
-            List<UsuarioViewModel> usuarios = repositorioUsuario.Listar ();
+            List<UsuarioViewModel> usuarios = RepositorioUsuario.Listar ();
 
             foreach (var item in usuarios) {
                 if (item != null) {
-                    System.Console.WriteLine ($"------------------------------");
+                    System.Console.WriteLine ($"----------------------------------------");
+                    System.Console.WriteLine ($"Id do Usuário: {item.Id}");
                     System.Console.WriteLine ($"Nome: {item.Nome}");
                     System.Console.WriteLine ($"E-mail: {item.Email}");
                     System.Console.WriteLine ($"Senha: {item.Senha}");
                     System.Console.WriteLine ($"Data de nascimento: {item.DataDeNascimento}");
                     System.Console.WriteLine ($"Saldo: {item.Saldo}");
                     System.Console.WriteLine ($"Tipo de Usuário: {item.Tipo}");
-                    System.Console.WriteLine ($"------------------------------");
+                    System.Console.WriteLine ($"----------------------------------------");
                 }
             }
-            System.Console.WriteLine ("Fim dos usuários");
+            CoresUtils.MostrarMensagem ("Fim dos usuários", TipoMensagemEnum.ERRO);
             System.Console.WriteLine ("Clique ENTER para continuar");
             Console.ReadLine ();
 
         }
         public static void UsuariosWord () {
-            List<UsuarioViewModel> usuarios = repositorioUsuario.Listar ();
+            List<UsuarioViewModel> usuarios = RepositorioUsuario.Listar ();
             Document doc = new Document ();
             Section section = doc.AddSection ();
             Paragraph Para = section.AddParagraph ();
@@ -168,6 +169,7 @@ namespace Finança_de_Mesa.ViewController {
                 if (item != null) {
                     Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n");
                     Para.AppendText ($"Nome:                                     {item.Nome}\n");
+                    Para.AppendText ($"Id do Usuário:                         {item.Id}\n");
                     Para.AppendText ($"E-mail:                                    {item.Email}\n");
                     Para.AppendText ($"Senha:                                     {item.Senha}\n");
                     Para.AppendText ($"Data de Nascimento:              {item.DataDeNascimento}\n");

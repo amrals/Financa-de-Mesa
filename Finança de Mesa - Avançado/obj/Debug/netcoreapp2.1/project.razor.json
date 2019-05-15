@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\41813664803\\Desktop\\Financa-de-Mesa - Copia\\Finança de Mesa\\Finança de Mesa.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+C:\Users\41813664803\Documents\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.deps.json
+C:\Users\41813664803\Documents\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.json
+C:\Users\41813664803\Documents\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.dev.json
+C:\Users\41813664803\Documents\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Documents\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.pdb
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csprojAssemblyReference.cache
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfoInputs.cache
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfo.cs
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Documents\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.pdb
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csprojAssemblyReference.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfoInputs.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfo.cs
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.pdb
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.deps.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.dev.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Desktop\Financa-de-Mesa\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.pdb
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.deps.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.runtimeconfig.dev.json
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\bin\Debug\netcoreapp2.1\Finança de Mesa.pdb
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csprojAssemblyReference.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfoInputs.cache
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.AssemblyInfo.cs
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.dll
+C:\Users\41813664803\Desktop\Financa-de-Mesa - Copia\Finança de Mesa\obj\Debug\netcoreapp2.1\Finança de Mesa.pdb
