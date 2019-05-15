@@ -14,7 +14,7 @@ namespace Finança_de_Mesa.Repositorio {
 
             usuarioTeste.Tipo = "Comum";
 
-            sw.WriteLine ($"\n{usuarioTeste.Nome};{usuarioTeste.Email};{usuarioTeste.Senha};{usuarioTeste.DataDeNascimento};{usuarioTeste.Saldo};{usuarioTeste.Tipo}");
+            sw.WriteLine ($"{usuarioTeste.Nome};{usuarioTeste.Email};{usuarioTeste.Senha};{usuarioTeste.DataDeNascimento};{usuarioTeste.Saldo};{usuarioTeste.Tipo}");
             sw.Close ();
         }
         public List<UsuarioViewModel> Listar () {

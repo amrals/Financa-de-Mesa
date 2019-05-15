@@ -12,7 +12,7 @@ namespace Finança_de_Mesa.Repositorio {
 
             transacaoTeste.DataTransacao = DateTime.Now;
 
-            sw.Write ($"{transacaoTeste.NomeUsuario};{transacaoTeste.Valor};{transacaoTeste.Tipo};{transacaoTeste.Descricao};{transacaoTeste.DataTransacao}\n");
+            sw.WriteLine ($"{transacaoTeste.NomeUsuario};{transacaoTeste.Valor};{transacaoTeste.Tipo};{transacaoTeste.Descricao};{transacaoTeste.DataTransacao}");
             sw.Close ();
         }
         public static List<TransacaoViewModel> Listar () {

@@ -12,9 +12,10 @@ namespace Finança_de_Mesa.ViewController {
         static RepositorioUsuario repositorioUsuario = new RepositorioUsuario ();
         public static void CadastrarUsuario () {
 
-            string nome = "", email = "", senha = "", teste = "";
+            string nome = "", email = "", senha = "", teste = "", testesenha = "";
             DateTime nascimento;
             int i = 0;
+            DateTime maiorDeIdade = DateTime.Parse("15/05/2001");
 
             Console.Clear ();
             do {
@@ -49,15 +50,17 @@ namespace Finança_de_Mesa.ViewController {
             Console.Clear ();
             do {
                 if (i > 0) {
-                    CoresUtils.MostrarMensagem ("Digite uma senha válida", TipoMensagemEnum.ERRO);
+                    CoresUtils.MostrarMensagem ("Senha inválida ou não corresponderam", TipoMensagemEnum.ERRO);
                     System.Console.WriteLine ("Pressione ENTER para continuar");
                     Console.ReadLine ();
                     Console.Clear ();
                 }
                 System.Console.WriteLine ("Digite sua senha: (min. 8)");
                 senha = Console.ReadLine ();
+                System.Console.WriteLine ("Digite sua senha novamente: (min. 8)");
+                testesenha = Console.ReadLine ();
                 i++;
-            } while (senha.Length < 8);
+            } while (senha.Length < 8 || senha != testesenha);
 
             i = 0;
 
@@ -69,10 +72,10 @@ namespace Finança_de_Mesa.ViewController {
                     Console.ReadLine ();
                     Console.Clear ();
                 }
-                System.Console.WriteLine ("Digite sua data de nascimento:");
+                System.Console.WriteLine ("Digite sua data de nascimento: (você precisa ser maior de idade)");
                 teste = Console.ReadLine ();
                 i++;
-            } while (!DateTime.TryParse (teste, out nascimento));
+            } while (!DateTime.TryParse (teste, out nascimento) || nascimento > maiorDeIdade);
 
             UsuarioViewModel usuarioTeste = new UsuarioViewModel ();
             usuarioTeste.Nome = nome;
@@ -81,6 +84,10 @@ namespace Finança_de_Mesa.ViewController {
             usuarioTeste.DataDeNascimento = nascimento;
 
             RepositorioUsuario.Inserir (usuarioTeste);
+
+            CoresUtils.MostrarMensagem ("Usuário cadastrado com sucesso!", TipoMensagemEnum.SUCESSO);
+            System.Console.WriteLine ("Clique ENTER para continuar");
+            Console.ReadLine ();
         }
         public static UsuarioViewModel LoginUsuario () {
 
@@ -143,8 +150,8 @@ namespace Finança_de_Mesa.ViewController {
             Document doc = new Document ();
             Section section = doc.AddSection ();
             Paragraph Para = section.AddParagraph ();
-                    Para.AppendText ($"             LISTAGEM DOS USUÁRIOS CADASTRADOS NO BANCO: FINANÇA DE MESA\n\n\n");
-                    Para.AppendText ($"USUÁRIOS:\n\n");
+            Para.AppendText ($"             LISTAGEM DOS USUÁRIOS CADASTRADOS NO BANCO: FINANÇA DE MESA\n\n\n");
+            Para.AppendText ($"USUÁRIOS:\n\n");
             foreach (var item in usuarios) {
                 if (item != null) {
                     Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n");

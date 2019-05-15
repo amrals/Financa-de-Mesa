@@ -13,6 +13,7 @@ namespace Finança_de_Mesa.ViewController {
             string tipo, descricao;
             float valor;
             int i = 0;
+            string teste = "";
 
             Console.Clear ();
             do {
@@ -25,7 +26,7 @@ namespace Finança_de_Mesa.ViewController {
                 System.Console.WriteLine ("Digite o tipo da transação (Despesa / Receita): ");
                 tipo = Console.ReadLine ();
                 i++;
-            } while (!tipo.Contains ("D") && !tipo.Contains ("R"));
+            } while (!tipo.Contains ("D") && !tipo.Contains ("d") && !tipo.Contains ("R") && !tipo.Contains ("r"));
 
             i = 0;
 
@@ -38,20 +39,20 @@ namespace Finança_de_Mesa.ViewController {
                     Console.Clear ();
                 }
                 System.Console.WriteLine ("Digite o valor da transação:");
-                valor = float.Parse (Console.ReadLine ());
+                teste = Console.ReadLine ();
                 i++;
-            } while (valor <= 0);
+            } while (!float.TryParse (teste, out valor) && valor <= 0);
 
-            if (tipo.Contains ("R")) {
+            if (tipo.Contains ("R") || tipo.Contains ("r")) {
                 valor = valor * -1;
             }
 
             if (valor <= recuperado.Saldo) {
 
-                if (tipo.Contains ("D")) {
+                if (tipo.Contains ("D") || tipo.Contains ("d")) {
                     recuperado.Saldo = recuperado.Saldo - valor;
                     tipo = "DESPESA";
-                } else if (tipo.Contains ("R")) {
+                } else if (tipo.Contains ("R") || tipo.Contains ("r")) {
                     valor = valor * -1;
                     recuperado.Saldo = recuperado.Saldo + valor;
                     tipo = "RECEITA";
@@ -61,7 +62,7 @@ namespace Finança_de_Mesa.ViewController {
 
                 Console.Clear ();
 
-                System.Console.WriteLine ("Descreva a transação");
+                System.Console.WriteLine ("Descreva a transação:");
                 descricao = Console.ReadLine ();
 
                 Console.Clear ();
@@ -74,11 +75,15 @@ namespace Finança_de_Mesa.ViewController {
 
                 RepositorioTransacao.Inserir (transacaoTeste);
 
+                CoresUtils.MostrarMensagem ("Transação concluída com sucesso!", TipoMensagemEnum.SUCESSO);
+                System.Console.WriteLine ("Clique ENTER para continuar");
+                Console.ReadLine ();
+
                 return recuperado;
             } else {
                 CoresUtils.MostrarMensagem ("\nNão há saldo suficiente para esta transação!!!", TipoMensagemEnum.ERRO);
                 System.Console.WriteLine ("Pressione ENTER para continuar");
-                Console.ReadLine();
+                Console.ReadLine ();
                 Console.Clear ();
                 return recuperado;
             }
@@ -109,11 +114,11 @@ namespace Finança_de_Mesa.ViewController {
             Document doc = new Document ();
             Section section = doc.AddSection ();
             Paragraph Para = section.AddParagraph ();
-            string nomeMaisculo = nome.ToUpper();
+            string nomeMaisculo = nome.ToUpper ();
             Para.AppendText ($"                    LISTAGEM DAS TRANSAÇÕES DO USUÁRIO: {nomeMaisculo}\n\n\n");
             Para.AppendText ($"TRANSAÇÕES:\n\n");
             foreach (var item in transacoes) {
-                if (item != null && item.NomeUsuario.Equals(nome)){
+                if (item != null && item.NomeUsuario.Equals (nome)) {
                     Para.AppendText ($"---------------------------------------------------------------------------------------------------------------------------\n");
                     Para.AppendText ($"Valor:                                                                R$ {item.Valor}\n");
                     Para.AppendText ($"Tipo:                                                                  {item.Tipo}\n");
